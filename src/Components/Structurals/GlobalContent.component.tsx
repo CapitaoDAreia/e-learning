@@ -1,9 +1,14 @@
 import React from "react";
+import { Routes, Route } from 'react-router-dom';
 
 import styled from "styled-components";
+import ScreenTest1 from "../../Views/ScreenTest1";
+import ScreenTest2 from "../../Views/ScreenTest2";
+
 
 const GlobalContentComponent = styled.div`
-    width: 80%;
+    width: 90%;
+    height: 100%;
     align-self: center;
     
 `;
@@ -11,15 +16,10 @@ const GlobalContentComponent = styled.div`
 const GlobalContent = () => {
     return (
         <GlobalContentComponent>
-            <div>
-                Content 
-            </div>
-            <br/>
-            <div>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Eaque, voluptate nihil, corporis sint cum eius facilis dicta nam nostrum animi aut dolor.
-                Illum debitis commodi asperiores dolorem maiores, vitae delectus.
-            </div>
+            <Routes>
+                <Route path="/screen2" element={<ScreenTest2 />} />
+                <Route path="/screen1" element={<ScreenTest1 />} />
+            </Routes>
         </GlobalContentComponent>
     )
 }

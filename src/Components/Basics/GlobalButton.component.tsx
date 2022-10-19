@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 type GlobalButtonProps = {
-    label: string
+    label: string,
 }
 
 const GlobalButtonComponent = styled.button`
@@ -28,7 +28,7 @@ const GlobalButtonComponent = styled.button`
 
 const GlobalButton = (props: GlobalButtonProps) => {
     return (
-        <GlobalButtonComponent>
+        <GlobalButtonComponent onClick={()=>{console.log(props.label)}} >
             {props.label}
         </GlobalButtonComponent>
     )

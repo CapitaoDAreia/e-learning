@@ -2,13 +2,22 @@ import React from "react";
 
 import styled from "styled-components";
 
-const GlobalHeaderComponent = styled.div``
+const GlobalHeaderComponent = styled.div`
+    width: 100%;
+    padding: 10px 5px;
 
-const GlobalHeader=()=>{
-    return(
-        <div>
-            Header
-        </div>
+
+    background-color: #d3d3d3;
+
+    display: flex;
+    justify-content: space-evenly;
+`;
+
+const GlobalHeader = () => {
+    return (
+        <GlobalHeaderComponent>
+            Header - Company Info
+        </GlobalHeaderComponent>
     )
 }
 

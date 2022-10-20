@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type GlobalButtonProps = {
     label: string,
+    destination: string
 }
 
 const GlobalButtonComponent = styled.button`
@@ -28,9 +30,11 @@ const GlobalButtonComponent = styled.button`
 
 const GlobalButton = (props: GlobalButtonProps) => {
     return (
-        <GlobalButtonComponent onClick={()=>{console.log(props.label)}} >
-            {props.label}
-        </GlobalButtonComponent>
+        <Link to={props.destination}>
+            <GlobalButtonComponent >
+                {props.label}
+            </GlobalButtonComponent>
+        </Link>
     )
 }
 

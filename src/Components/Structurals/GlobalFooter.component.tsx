@@ -18,8 +18,7 @@ const GlobalFooterComponent = styled.div`
 const GlobalFooter = (props: {}) => {
     return (
         <GlobalFooterComponent>
-            <GlobalButton label="ANTERIOR"/>
-            <GlobalButton label="PRÓXIMO"/>
+            Footer - Company Info
         </GlobalFooterComponent>
     )
 }

@@ -8,7 +8,7 @@ const GlobalStructureComponent = styled.div`
     border: 2px solid #fcfcfc;
     border-radius: 10px;
     max-width: 900px;
-    height: 600px;
+    height: 700px;
 
     overflow: hidden;
 

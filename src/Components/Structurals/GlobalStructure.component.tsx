@@ -7,7 +7,7 @@ import GlobalHeaderComponent from "./GlobalHeader.component";
 const GlobalStructureComponent = styled.div`
     border: 2px solid #fcfcfc;
     border-radius: 10px;
-    width: 1000px;
+    max-width: 900px;
     height: 600px;
 
     overflow: hidden;

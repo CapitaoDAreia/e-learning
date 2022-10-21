@@ -4,10 +4,11 @@ import styled from "styled-components";
 import GlobalButton from "../Basics/GlobalButton.component";
 
 import { Link } from "react-router-dom";
+import { locale } from "../../global.presets";
 
 const GlobalFooterComponent = styled.div`
     width: 100%;
-    padding: 10px 5px;
+    padding: 5px 10px;
 
     background-color: #d3d3d3;
 
@@ -18,7 +19,7 @@ const GlobalFooterComponent = styled.div`
 const GlobalFooter = (props: {}) => {
     return (
         <GlobalFooterComponent>
-            Footer - Company Info
+            <p>{locale.footer}</p>
         </GlobalFooterComponent>
     )
 }

@@ -20,11 +20,13 @@ const GlobalButtonComponent = styled.button`
     cursor: pointer;
 
     &:hover{
-        opacity: .9;
+        opacity: .7;
+        transition: 1s;
     }
 
     &:active{
-        opacity: .5;
+        opacity: .3;
+        transition: 1s;
     }
 `;
 

@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/build/static/css/main.40983b14.css",
+    "main.js": "/build/static/js/main.90cca2dd.js",
+    "static/media/start-page.png": "/build/static/media/start-page.d8916fd333a11f539c99.png",
+    "index.html": "/build/index.html",
+    "main.40983b14.css.map": "/build/static/css/main.40983b14.css.map",
+    "main.90cca2dd.js.map": "/build/static/js/main.90cca2dd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40983b14.css",
+    "static/js/main.90cca2dd.js"
+  ]
+}

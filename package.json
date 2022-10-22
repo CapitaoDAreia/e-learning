@@ -1,5 +1,6 @@
 {
   "name": "e-learning",
+  "homepage": "http://127.0.0.1:5501/build",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

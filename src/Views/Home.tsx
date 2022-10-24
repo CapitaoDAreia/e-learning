@@ -44,7 +44,6 @@ const Home = () => {
                 <div>
                     <h3>Bem-vindo(a) ao treinamento de LGPD</h3>
                 </div>
-                <GlobalButton destination='/middle1' label="INICIAR" />
             </PopUpHomeComponent>
         </HomeComponent>
     )

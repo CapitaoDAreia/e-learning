@@ -3,7 +3,6 @@ import React from "react";
 import styled from "styled-components";
 import GlobalButton from "../Basics/GlobalButton.component";
 
-import { Link } from "react-router-dom";
 import { locale } from "../../global.presets";
 
 const GlobalFooterComponent = styled.div`
@@ -16,10 +15,15 @@ const GlobalFooterComponent = styled.div`
     justify-content: space-evenly;
 `;
 
-const GlobalFooter = (props: {}) => {
+type GlobalFooterProps = {
+    pagination: React.Dispatch<React.SetStateAction<number>>
+}
+
+const GlobalFooter = (props: GlobalFooterProps) => {
     return (
         <GlobalFooterComponent>
-            <p>{locale.footer}</p>
+            <GlobalButton pagination={props.pagination} label="Voltar" destination="página anterior"/>
+            <GlobalButton pagination={props.pagination} label="Avançar" destination="próxima página"/>
         </GlobalFooterComponent>
     )
 }

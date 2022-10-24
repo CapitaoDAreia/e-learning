@@ -47,7 +47,6 @@ const ScreenTest1 = () => {
                 </p>
             </div>
             <GlobalButtonWrapper>
-                <GlobalButton destination="/screen2" label="PRÓXIMO" />
             </GlobalButtonWrapper>
         </ScreenTestComponent1>
     )

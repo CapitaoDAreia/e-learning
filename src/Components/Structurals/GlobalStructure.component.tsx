@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from 'styled-components'
 import GlobalContent from "./GlobalContent.component";
 import GlobalFooterComponent from "./GlobalFooter.component";
@@ -12,7 +12,6 @@ const GlobalStructureComponent = styled.div`
 
     overflow: hidden;
 
-
     background-color: #EEEEEE;
     display: flex;
     flex-direction: column;
@@ -20,13 +19,16 @@ const GlobalStructureComponent = styled.div`
 `;
 
 const GlobalStructure = (props: {}) => {
+
+    const [pagination, setPagination] = useState(0)
+
     return (
         <GlobalStructureComponent>
             <GlobalHeaderComponent />
 
-            <GlobalContent />
+            {pagination === 0 ? <GlobalContent /> : 'none'}
             
-            <GlobalFooterComponent />
+            <GlobalFooterComponent pagination={setPagination} />
         </GlobalStructureComponent>
     )
 }

@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
 
 type GlobalButtonProps = {
-    label: string,
+    label: string
     destination: string
+    pagination: React.Dispatch<React.SetStateAction<number>>
 }
 
 const GlobalButtonComponent = styled.button`
@@ -31,12 +32,32 @@ const GlobalButtonComponent = styled.button`
 `;
 
 const GlobalButton = (props: GlobalButtonProps) => {
-    return (
-        <Link to={props.destination}>
-            <GlobalButtonComponent >
-                {props.label}
-            </GlobalButtonComponent>
-        </Link>
+
+    const [count, setCount] = useState(0)
+
+    const handleCountValue = () => {
+        if (props.label === 'Avançar' && count >= 0) {
+            setCount(count + 1)
+
+        }
+        if (props.label === 'Voltar' && count >= 0) {
+            setCount(count - 1)
+
+        }
+    }
+
+    return (<>
+        <GlobalButtonComponent onClick={
+            () => {
+                handleCountValue()
+                console.log(props.label, count)
+                // props.pagination(count)
+            }
+        } >
+            {props.label}
+        </GlobalButtonComponent>
+        <input type="text" value={count} />
+    </>
     )
 }
 

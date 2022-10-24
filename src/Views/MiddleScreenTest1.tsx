@@ -27,7 +27,6 @@ const MiddleScreenTest1 = () => {
                 title={`${locale.title}`}
                 subtitle={`${locale.title}`}
             />
-            <GlobalButton destination="/screen1" label="PRÓXIMO" />
         </MiddleScreenTestComponent1>
     )
 }

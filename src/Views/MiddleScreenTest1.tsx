@@ -2,8 +2,6 @@ import React from "react";
 
 import styled from "styled-components";
 import Book from "../Components/Basics/BookComponent.component";
-import GlobalButton from "../Components/Basics/GlobalButton.component";
-import GlobalButtonWrapper from "../Components/Structurals/GlobalButtonWrapper.component";
 import { locale } from "../global.presets";
 
 const MiddleScreenTestComponent1 = styled.div`
@@ -17,7 +15,6 @@ const MiddleScreenTestComponent1 = styled.div`
     justify-content: space-evenly;
     align-items: center;
     /* gap: 50px; */
-
 `;
 
 const MiddleScreenTest1 = () => {

@@ -1,7 +1,5 @@
 import React from "react";
-
 import styled from "styled-components";
-import GlobalButton from "../Components/Basics/GlobalButton.component";
 import GlobalButtonWrapper from "../Components/Structurals/GlobalButtonWrapper.component";
 
 const ScreenTestComponent1 = styled.div`
@@ -9,11 +7,9 @@ const ScreenTestComponent1 = styled.div`
     color: #eeeeee;
     width: 100%;
     height: 100%;
-    
     display: flex;
     flex-wrap: wrap;
     text-align: center;
-    /* gap: 50px; */
 
     .title{
         width: 100%;

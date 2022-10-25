@@ -34,7 +34,12 @@ const GlobalStructure = (props: {}) => {
             <GlobalHeaderComponent />
 
             <GlobalContent>
-                {pagination === 0 ? <Home /> : 'none'}
+                {
+                    pagination === 0 ? <Home /> : 
+                    pagination === 1 ? <MiddleScreenTest1/> :
+                    pagination === 2 ? <ScreenTest1 /> :
+                    pagination === 3 ? <ScreenTest2/> : 'End of line, 3 is your limit for now.'
+                }
             </GlobalContent>
 
             <GlobalFooterComponent counter={counter} setCounter={setCounter} setPagination={setPagination} />

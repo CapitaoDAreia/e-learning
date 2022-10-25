@@ -7,7 +7,7 @@ type GlobalButtonProps = {
     setPagination: React.Dispatch<React.SetStateAction<number>>
     setCounter: React.Dispatch<React.SetStateAction<number>>
     counter: number
-    
+
 }
 
 const GlobalButtonComponent = styled.button`
@@ -37,20 +37,24 @@ const GlobalButtonComponent = styled.button`
 const GlobalButton = (props: GlobalButtonProps) => {
 
 
-    useEffect(()=>{
-        console.log(props.counter)
-        props.setPagination(props.counter)
-        
+    useEffect(() => {
+        if (props.counter >= 0) {
+            console.log(props.counter)
+            props.setPagination(props.counter)
+        }else{
+            props.setCounter(props.counter+1)
+        }
+
     }, [props.counter])
-    
+
 
     const handleCountValue = () => {
         if (props.label === 'Avançar' && props.counter >= 0) {
-            props.setCounter(props.counter+1)
+            props.setCounter(props.counter + 1)
 
         }
         if (props.label === 'Voltar' && props.counter >= 0) {
-            props.setCounter(props.counter-1)
+            props.setCounter(props.counter - 1)
 
         }
     }

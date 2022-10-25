@@ -16,14 +16,16 @@ const GlobalFooterComponent = styled.div`
 `;
 
 type GlobalFooterProps = {
-    pagination: React.Dispatch<React.SetStateAction<number>>
+    setPagination: React.Dispatch<React.SetStateAction<number>>
+    setCounter: React.Dispatch<React.SetStateAction<number>>
+    counter: number
 }
 
 const GlobalFooter = (props: GlobalFooterProps) => {
     return (
         <GlobalFooterComponent>
-            <GlobalButton pagination={props.pagination} label="Voltar" destination="página anterior"/>
-            <GlobalButton pagination={props.pagination} label="Avançar" destination="próxima página"/>
+            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Voltar" destination="página anterior"/>
+            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Avançar" destination="próxima página"/>
         </GlobalFooterComponent>
     )
 }

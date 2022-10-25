@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 type GlobalButtonProps = {
     label: string
     destination: string
-    pagination: React.Dispatch<React.SetStateAction<number>>
+    setPagination: React.Dispatch<React.SetStateAction<number>>
+    setCounter: React.Dispatch<React.SetStateAction<number>>
+    counter: number
+    
 }
 
 const GlobalButtonComponent = styled.button`
@@ -33,15 +36,21 @@ const GlobalButtonComponent = styled.button`
 
 const GlobalButton = (props: GlobalButtonProps) => {
 
-    const [count, setCount] = useState(0)
+
+    useEffect(()=>{
+        console.log(props.counter)
+        props.setPagination(props.counter)
+        
+    }, [props.counter])
+    
 
     const handleCountValue = () => {
-        if (props.label === 'Avançar' && count >= 0) {
-            setCount(count + 1)
+        if (props.label === 'Avançar' && props.counter >= 0) {
+            props.setCounter(props.counter+1)
 
         }
-        if (props.label === 'Voltar' && count >= 0) {
-            setCount(count - 1)
+        if (props.label === 'Voltar' && props.counter >= 0) {
+            props.setCounter(props.counter-1)
 
         }
     }
@@ -50,13 +59,11 @@ const GlobalButton = (props: GlobalButtonProps) => {
         <GlobalButtonComponent onClick={
             () => {
                 handleCountValue()
-                console.log(props.label, count)
-                // props.pagination(count)
             }
         } >
             {props.label}
         </GlobalButtonComponent>
-        <input type="text" value={count} />
+        <input type="text" value={props.counter} />
     </>
     )
 }

@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import GlobalTextWindow from "../Components/Basics/GlobalTextWindow.component";
 import GlobalButtonWrapper from "../Components/Structurals/Footer/GlobalButtonWrapper.component";
+import BackGroundImage from '../assets/img/start-page.png'
+
 
 const ScreenTestComponent1 = styled.div`
-    background-color: grey;
-    color: #eeeeee;
+    background-color: #eeeeee;
+    color: #000000;
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,15 +20,23 @@ const ScreenTestComponent1 = styled.div`
         margin-top: 15px;
     }
     .content{
-        h2{
-            margin-bottom: 30px;
-        }
-        p{
-            width: 80%;
+        p.contentp{
+            width: 50%;
             margin: 0px auto;
+        }
+        div{
+            width: 80%;
+            p{
+                margin-bottom: 20px;
+                text-align: left;
+            }
         }
         width: 100%;
         height: 60%;
+        padding: 10px 20px;
+        gap: 5px;
+        display: flex;
+        /* flex-wrap: nowrap; */
     }
 `;
 
@@ -33,14 +44,29 @@ const ScreenTest1 = () => {
     return (
         <ScreenTestComponent1>
             <div className="title">
-                <h1>Título do treinamento</h1>
+                <h1>O que é LGPD?</h1>
             </div>
             <div className="content">
-                <h2>Treinamento sobre LGPD</h2>
-                <p>
-                    A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
-                    é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
-                </p>
+                <div className="innercontent">
+                    <p >
+                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
+                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
+                    </p>
+                    <p  >
+                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
+                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
+                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
+                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
+                        
+                    </p>
+                </div>
+                <GlobalTextWindow>
+                    <p>
+                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
+                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
+                    </p>
+                </GlobalTextWindow>
+                
             </div>
             <GlobalButtonWrapper>
             </GlobalButtonWrapper>

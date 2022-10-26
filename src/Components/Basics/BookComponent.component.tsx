@@ -53,7 +53,7 @@ const Book = (props: ButtonProps) => {
                 <li>{props.first ? <Circle /> : ''} {props.first}</li>
                 <li>{props.second ? <Circle /> : ''} {props.second}</li>
                 <li>{props.third ? <Circle /> : ''} {props.third}</li>
-                <li>{props.fourth ? <Circle/> : ''}{props.fourth}</li>
+                <li>{props.fourth ? <Circle /> : ''} {props.fourth}</li>
             </ul>
         </BookComponent>
     )

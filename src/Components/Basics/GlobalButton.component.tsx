@@ -11,11 +11,12 @@ type GlobalButtonProps = {
 
 const GlobalButtonComponent = styled.button`
     font-size: .9rem;
-    padding: 4px 6px;
+    width: 100px;
+    height: 30px;
     background-color: #010931;
     color: #eeeeee;
     border: 0.5px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     &:hover{
         opacity: .7;
@@ -25,6 +26,7 @@ const GlobalButtonComponent = styled.button`
         opacity: .3;
         transition: 1s;
     }
+
 `;
 
 const GlobalButton = (props: GlobalButtonProps) => {
@@ -36,30 +38,20 @@ const GlobalButton = (props: GlobalButtonProps) => {
         } else {
             props.setCounter(props.counter + 1)
         }
-
     }, [props.counter])
-
 
     const handleCountValue = () => {
         if (props.label === 'Avançar' && props.counter >= 0) {
             props.setCounter(props.counter + 1)
-
         }
         if (props.label === 'Voltar' && props.counter >= 0) {
             props.setCounter(props.counter - 1)
-
         }
     }
 
     return (
         <>
-            <GlobalButtonComponent onClick={
-                () => {
-                    handleCountValue()
-                }
-            } >
-                {props.label}
-            </GlobalButtonComponent>
+            <GlobalButtonComponent onClick={() => { handleCountValue() }}>{props.label}</GlobalButtonComponent>
         </>
     )
 }

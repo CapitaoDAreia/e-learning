@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import GlobalButtonWrapper from "../Components/Structurals/GlobalButtonWrapper.component";
+import GlobalButtonWrapper from "../Components/Structurals/Footer/GlobalButtonWrapper.component";
 
 const ScreenTestComponent1 = styled.div`
     background-color: grey;

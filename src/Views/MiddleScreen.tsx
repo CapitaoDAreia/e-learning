@@ -5,24 +5,26 @@ import Book from "../Components/Basics/BookComponent.component";
 import { locale } from "../global.presets";
 
 const MiddleScreenTestComponent1 = styled.div`
-    background-color: grey;
-    color: #eeeeee;
+    background-color: #eeeeee;
+    color: #000000;
     width: 100%;
     height: 100%;
-    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* gap: 50px; */
 `;
 
 const MiddleScreenTest1 = () => {
     return (
         <MiddleScreenTestComponent1>
             <Book
-                title={`${locale.title}`}
-                subtitle={`${locale.title}`}
+                title='O que é LGPD?'
+                subtitle='Subtitle'
+                first='Exemplo de tema'
+                second='Exemplo de tema 2'
+                third='Exemplo de tema 3'
+                fourth='Exemplo de tema 4'
             />
         </MiddleScreenTestComponent1>
     )

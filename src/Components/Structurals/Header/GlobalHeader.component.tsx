@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import LogoImg from '../../assets/img/logo.png';
-import { locale } from "../../global.presets";
+import LogoImg from '../../../assets/img/logo.png';
+import { locale } from "../../../global.presets";
 
 const GlobalHeaderComponent = styled.div`
     box-sizing: border-box;

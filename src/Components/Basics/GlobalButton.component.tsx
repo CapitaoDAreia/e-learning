@@ -60,7 +60,6 @@ const GlobalButton = (props: GlobalButtonProps) => {
             } >
                 {props.label}
             </GlobalButtonComponent>
-            <input type="text" value={props.counter} />
         </>
     )
 }

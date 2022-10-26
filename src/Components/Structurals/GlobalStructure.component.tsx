@@ -3,12 +3,12 @@ import styled from 'styled-components'
 
 //Structurals
 import GlobalContent from "./GlobalContent.component";
-import GlobalFooterComponent from "./GlobalFooter.component";
-import GlobalHeaderComponent from "./GlobalHeader.component";
+import GlobalFooterComponent from "./Footer/GlobalFooter.component";
+import GlobalHeaderComponent from "./Header/GlobalHeader.component";
 
 //Screens
 import Home from "../../Views/Home";
-import MiddleScreenTest1 from "../../Views/MiddleScreenTest1";
+import MiddleScreenTest1 from "../../Views/MiddleScreen";
 import ScreenTest1 from "../../Views/ScreenTest1";
 import ScreenTest2 from "../../Views/ScreenTest2";
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import GlobalButton from "../Basics/GlobalButton.component";
+import GlobalButton from "../../Basics/GlobalButton.component";
 
 const GlobalFooterComponent = styled.div`
     width: 100%;

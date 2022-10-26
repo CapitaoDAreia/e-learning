@@ -8,9 +8,12 @@ import GlobalHeaderComponent from "./Header/GlobalHeader.component";
 
 //Screens
 import Home from "../../Views/Home";
-import MiddleScreenTest1 from "../../Views/MiddleScreen";
-import ScreenTest1 from "../../Views/ScreenTest1";
-import ScreenTest2 from "../../Views/ScreenTest2";
+import MiddleScreen from "../../Views/MiddleScreen";
+import Intro from "../../Views/Cap1/Intro";
+import ScreenTest2 from "../../Views/Cap1/Screen1";
+import Instructions from "../../Views/Instructions";
+import End from "../../Views/EndScreen";
+
 
 const GlobalStructureComponent = styled.div`
     border: 2px solid #fcfcfc;
@@ -35,9 +38,12 @@ const GlobalStructure = () => {
             <GlobalContent>
                 {
                     pagination === 0 ? <Home /> :
-                        pagination === 1 ? <MiddleScreenTest1 /> :
-                            pagination === 2 ? <ScreenTest1 /> :
-                                pagination === 3 ? <ScreenTest2 /> : 'End of line, 3 is your limit for now.'
+                        pagination === 1 ? <Instructions /> :
+                            pagination === 2 ? <MiddleScreen /> :
+                                pagination === 3 ? <Intro /> :
+                                    pagination === 4 ? <ScreenTest2 /> :
+                                        pagination === 5 ? <End /> :
+                                            'Out of range'
                 }
             </GlobalContent>
             <GlobalFooterComponent counter={counter} setCounter={setCounter} setPagination={setPagination} />

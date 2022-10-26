@@ -15,11 +15,11 @@ const MiddleScreenTestComponent1 = styled.div`
     align-items: center;
 `;
 
-const MiddleScreenTest1 = () => {
+const MiddleScreen = () => {
     return (
         <MiddleScreenTestComponent1>
             <Book
-                title='O que é LGPD?'
+                title='O que é XYZ?'
                 subtitle='Subtitle'
                 first='Exemplo de tema'
                 second='Exemplo de tema 2'
@@ -30,4 +30,4 @@ const MiddleScreenTest1 = () => {
     )
 }
 
-export default MiddleScreenTest1
+export default MiddleScreen

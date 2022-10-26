@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import GlobalTextWindow from "../Components/Basics/GlobalTextWindow.component";
-import GlobalButtonWrapper from "../Components/Structurals/Footer/GlobalButtonWrapper.component";
+import GlobalTextWindow from "../../Components/Basics/GlobalTextWindow.component";
+import GlobalButtonWrapper from "../../Components/Structurals/Footer/GlobalButtonWrapper.component";
+import BackGroundImage from '../assets/img/start-page.png'
+
 
 const ScreenTestComponent1 = styled.div`
     background-color: #eeeeee;
@@ -42,26 +44,20 @@ const ScreenTest1 = () => {
     return (
         <ScreenTestComponent1>
             <div className="title">
-                <h1>Isso é LGPD</h1>
+                <h1>O que é XYZ?</h1>
             </div>
             <div className="content">
                 <div className="innercontent">
                     <p >
-                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
-                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia et eum nesciunt voluptas, consequuntur totam quae reprehenderit adipisci minima saepe voluptates nostrum debitis iusto obcaecati asperiores veniam est laudantium doloribus!
                     </p>
                     <p  >
-                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
-                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
-                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
-                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
-                        
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati officia suscipit dolorem sint ab animi delectus quidem nihil libero vel, harum tenetur fugiat ipsam? Consequatur laborum deleniti libero quisquam pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus molestias placeat modi nisi incidunt maiores. Natus rerum tenetur laboriosam consectetur quidem fugit exercitationem at commodi voluptatum? Impedit, ipsa officia!
                     </p>
                 </div>
                 <GlobalTextWindow>
                     <p>
-                        A Lei Geral de Proteção de Dados Pessoais (LGPD ou LGPDP),
-                        é a legislação brasileira que regula as atividades de tratamento de dados pessoais e que também altera os artigos 7º e 16 do Marco Civil da Internet.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam laboriosam ea sunt deleniti autem. Sapiente architecto dolorem rem molestiae, laboriosam ipsa optio temporibus animi itaque est in dicta! Sint, quibusdam!
                     </p>
                 </GlobalTextWindow>
                 

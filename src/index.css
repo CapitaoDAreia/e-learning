@@ -12,7 +12,7 @@ body {
 
     height: 100vh;
 
-    background-color: #010931;
+    background-color: rgba(1, 9, 50, 0.84);
     display: flex;
     justify-content: center;
     align-items: center;

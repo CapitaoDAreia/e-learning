@@ -7,7 +7,7 @@ const GlobalHeaderComponent = styled.div`
     box-sizing: border-box;
     width: 900px;
     padding: 5px 20px;
-    background-color: #d3d3d3;
+    background-color: #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;

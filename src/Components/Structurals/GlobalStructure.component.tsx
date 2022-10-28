@@ -16,7 +16,8 @@ import End from "../../Views/EndScreen";
 
 
 const GlobalStructureComponent = styled.div`
-    border: 2px solid #fcfcfc;
+    border: 1px solid #eee;
+    padding: 2px 8px;
     border-radius: 10px;
     max-width: 900px;
     height: 700px;
@@ -31,22 +32,32 @@ const GlobalStructure = () => {
 
     const [pagination, setPagination] = useState(0)
     const [counter, setCounter] = useState(0)
+    const paginationLength = 5
 
     return (
         <GlobalStructureComponent>
             <GlobalHeaderComponent />
             <GlobalContent>
                 {
+                    // switch (pagination) {
+                    //     case '0': <Home />; break;
+                    //     case '1': <Instructions />; break;
+                    //     case '2': <MiddleScreen />;break;
+                    //     case '3': <Intro />;break;
+                    //     case '4': <ScreenTest2 />;break;
+                    //     case '5': <End />;break;
+                    //     default: <End />;
+                    // }
                     pagination === 0 ? <Home /> :
                         pagination === 1 ? <Instructions /> :
                             pagination === 2 ? <MiddleScreen /> :
                                 pagination === 3 ? <Intro /> :
                                     pagination === 4 ? <ScreenTest2 /> :
-                                        pagination === 5 ? <End /> :
+                                        pagination === paginationLength ? <End /> :
                                             'Out of range'
                 }
             </GlobalContent>
-            <GlobalFooterComponent counter={counter} setCounter={setCounter} setPagination={setPagination} />
+            <GlobalFooterComponent counter={counter} setCounter={setCounter} setPagination={setPagination} paginationLength={paginationLength}/>
         </GlobalStructureComponent>
     )
 }

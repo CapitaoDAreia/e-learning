@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import { countReset } from "console";
 import { useEffect } from "react";
 import styled from "styled-components";
@@ -64,9 +65,8 @@ const GlobalButton = (props: GlobalButtonProps) => {
 
     return (
         <>
-            {/* {props.counter === props.paginationLength ? '' : <GlobalButtonComponent onClick={() => { handleCountValue() }}>{props.label}</GlobalButtonComponent> } */}
             <GlobalButtonComponent onClick={() => { handleCountValue() }}>
-                {props.label === 'Voltar' ? <><ButtonIcon src={LeftArrow} alt="logo" />{props.label}</> : <>{props.label}<ButtonIcon src={RightArrow} alt="logo" /></>}
+                {props.label === "Voltar" ? <><ButtonIcon src={LeftArrow} alt="logo" />{props.label}</> : <>{props.label}<ButtonIcon src={RightArrow} alt="logo" /></>}
             </GlobalButtonComponent>
         </>
     )

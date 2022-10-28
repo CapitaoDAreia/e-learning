@@ -39,15 +39,6 @@ const GlobalStructure = () => {
             <GlobalHeaderComponent />
             <GlobalContent>
                 {
-                    // switch (pagination) {
-                    //     case '0': <Home />; break;
-                    //     case '1': <Instructions />; break;
-                    //     case '2': <MiddleScreen />;break;
-                    //     case '3': <Intro />;break;
-                    //     case '4': <ScreenTest2 />;break;
-                    //     case '5': <End />;break;
-                    //     default: <End />;
-                    // }
                     pagination === 0 ? <Home /> :
                         pagination === 1 ? <Instructions /> :
                             pagination === 2 ? <MiddleScreen /> :

@@ -19,7 +19,7 @@ const GlobalButtonComponent = styled.button`
     font-size: .9rem;
     width: 100px;
     height: 30px;
-    background-color: #0085cc;
+    background-color: #02061dd6;
     color: #eeeeee;
     border: none;
     border-radius: 5px;

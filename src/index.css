@@ -12,8 +12,10 @@ body {
 
     height: 100vh;
 
-    background-color: rgba(1, 9, 50, 0.84);
+    background-color: #02061dd6;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: 1s;
 }

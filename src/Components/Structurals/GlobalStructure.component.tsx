@@ -16,13 +16,13 @@ import End from "../../Views/EndScreen";
 
 
 const GlobalStructureComponent = styled.div`
-    border: 1px solid #eee;
+    border: 1px solid #bfbfbf;
     padding: 2px 8px;
     border-radius: 10px;
     max-width: 900px;
     height: 700px;
     overflow: hidden;
-    background-color: #EEEEEE;
+    background-color: #bfbfbf;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

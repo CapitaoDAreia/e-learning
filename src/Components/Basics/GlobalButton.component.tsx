@@ -20,10 +20,11 @@ const GlobalButtonComponent = styled.button`
     align-items: center;
     justify-content: center;
     gap: 5px;
-    font-size: .9rem;
+    font-size: 1rem;
     width: 100px;
     height: 30px;
-    background-color: #0085cc;
+    padding: 18px 60px;
+    background-color: #02061dd6;
     color: #eeeeee;
     border: none;
     border-radius: 5px;
@@ -40,7 +41,7 @@ const GlobalButtonComponent = styled.button`
 
 const ButtonIcon = styled.img`
     filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(120deg) brightness(104%) contrast(101%);
-    width: 20px;
+    width: 22px;
 `
 
 const GlobalButton = (props: GlobalButtonProps) => {

@@ -6,7 +6,7 @@ import GlobalButtonSkeleton from "../../Basics/GlobalButtonSkeleton.component";
 const GlobalFooterComponent = styled.div`
     width: 100%;
     padding: 10px 10px;
-    background-color: #eee;
+    background-color: #bfbfbf;
     display: flex;
     justify-content: space-evenly;
 `;
@@ -24,19 +24,21 @@ const GlobalFooter = (props: GlobalFooterProps) => {
     return (
         <GlobalFooterComponent>
             {
-                props.counter === 0 ? <>
-                    <GlobalButtonSkeleton label="Voltar" destination="página anterior" />
-                    <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Avançar" destination="próxima página" paginationLength={props.paginationLength}/>
-                </> 
-                : (props.counter === props.paginationLength ? <>
-                        <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Voltar" destination="página anterior" paginationLength={props.paginationLength}/>
-                        <GlobalButtonSkeleton label="Avançar" destination="próxima página" />
-                    </> 
-                    : <>
-                        <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Voltar" destination="página anterior" paginationLength={props.paginationLength}/>
-                        <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Avançar" destination="próxima página" paginationLength={props.paginationLength}/>
-            </>
-            )}
+                props.counter === 0 ?
+                    <>
+                        <GlobalButtonSkeleton label="Voltar" destination="página anterior" />
+                        <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Avançar" destination="próxima página" paginationLength={props.paginationLength} />
+                    </>
+                    : (props.counter === props.paginationLength ?
+                        <>
+                            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Voltar" destination="página anterior" paginationLength={props.paginationLength} />
+                            <GlobalButtonSkeleton label="Avançar" destination="próxima página" />
+                        </>
+                        : <>
+                            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Voltar" destination="página anterior" paginationLength={props.paginationLength} />
+                            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Avançar" destination="próxima página" paginationLength={props.paginationLength} />
+                        </>
+                    )}
         </GlobalFooterComponent>
     )
 }

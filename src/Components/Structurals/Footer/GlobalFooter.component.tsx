@@ -11,34 +11,12 @@ const GlobalFooterComponent = styled.div`
     justify-content: space-evenly;
 `;
 
-type GlobalFooterProps = {
-    setPagination: React.Dispatch<React.SetStateAction<number>>
-    setCounter: React.Dispatch<React.SetStateAction<number>>
-    counter: number
-    paginationLength: number
-}
 
-
-
-const GlobalFooter = (props: GlobalFooterProps) => {
+const GlobalFooter = () => {
     return (
         <GlobalFooterComponent>
-            {
-                props.counter === 0 ?
-                    <>
-                        <GlobalButtonSkeleton label="Voltar" destination="página anterior" />
-                        <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Avançar" destination="próxima página" paginationLength={props.paginationLength} />
-                    </>
-                    : (props.counter === props.paginationLength ?
-                        <>
-                            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Voltar" destination="página anterior" paginationLength={props.paginationLength} />
-                            <GlobalButtonSkeleton label="Avançar" destination="próxima página" />
-                        </>
-                        : <>
-                            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Voltar" destination="página anterior" paginationLength={props.paginationLength} />
-                            <GlobalButton counter={props.counter} setCounter={props.setCounter} setPagination={props.setPagination} label="Avançar" destination="próxima página" paginationLength={props.paginationLength} />
-                        </>
-                    )}
+            <GlobalButton />
+            <GlobalButton />
         </GlobalFooterComponent>
     )
 }

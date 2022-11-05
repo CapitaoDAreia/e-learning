@@ -36,7 +36,7 @@ const GlobalButtonSkeleton = (props: GlobalButtonPropsSkeleton) => {
     return (
         <>
             <GlobalButtonComponent>
-                {props.label === "Voltar" ? <><ButtonIcon src={LeftArrow} alt="logo" />{props.label}</> : <>{props.label}<ButtonIcon src={RightArrow} alt="logo" /></>}
+                Skeleton
             </GlobalButtonComponent>
         </>
     )

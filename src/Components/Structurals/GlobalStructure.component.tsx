@@ -48,7 +48,7 @@ const GlobalStructure = () => {
                                             'Out of range'
                 }
             </GlobalContent>
-            <GlobalFooterComponent counter={counter} setCounter={setCounter} setPagination={setPagination} paginationLength={paginationLength}/>
+            <GlobalFooterComponent/>
         </GlobalStructureComponent>
     )
 }

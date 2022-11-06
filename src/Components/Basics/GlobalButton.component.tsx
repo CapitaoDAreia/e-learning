@@ -1,10 +1,13 @@
-import { render } from "@testing-library/react";
-import { countReset } from "console";
-import { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import LeftArrow from '../../assets/img/left-arrow.png';
 import RightArrow from '../../assets/img/right-arrow.png';
+import { PaginationContext } from "../Structurals/GlobalStructure.component";
 
+
+type GlobalButtonProps = {
+    label: string
+}
 
 const GlobalButtonComponent = styled.button`
     display: flex;
@@ -35,13 +38,26 @@ const ButtonIcon = styled.img`
     width: 22px;
 `
 
-const GlobalButton = () => {
+const GlobalButton = (props: GlobalButtonProps) => {
 
+    const {actualPage, setActualPage} = React.useContext(PaginationContext)
+
+    function handleButtonPagination(){
+        if(props.label === 'Avançar'){
+            setActualPage(actualPage+1)
+        }
+
+        if(props.label === 'Voltar'){
+            setActualPage(actualPage-1)
+        }
+    }
 
     return (
         <>
-            <GlobalButtonComponent>
-                Botao
+            <GlobalButtonComponent onClick={()=>{
+                handleButtonPagination()
+            }} >
+                {props.label}
             </GlobalButtonComponent>
         </>
     )

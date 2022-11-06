@@ -15,8 +15,8 @@ const GlobalFooterComponent = styled.div`
 const GlobalFooter = () => {
     return (
         <GlobalFooterComponent>
-            <GlobalButton />
-            <GlobalButton />
+            <GlobalButton label="Voltar" />
+            <GlobalButton label="Avançar" />
         </GlobalFooterComponent>
     )
 }

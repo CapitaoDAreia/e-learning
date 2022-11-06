@@ -28,13 +28,19 @@ const GlobalStructureComponent = styled.div`
     justify-content: space-between;
 `;
 
+const PaginationContextValues = {
+    actualPage: 0,
+    setActualPage: (n:number)=> {}
+}
+
+export const PaginationContext = React.createContext(PaginationContextValues)
+
 const GlobalStructure = () => {
 
     const [pagination, setPagination] = useState(0)
-    const [counter, setCounter] = useState(0)
-    const paginationLength = 5
 
     return (
+        <PaginationContext.Provider value={{actualPage: pagination, setActualPage: setPagination }}>
         <GlobalStructureComponent>
             <GlobalHeaderComponent />
             <GlobalContent>
@@ -44,12 +50,13 @@ const GlobalStructure = () => {
                             pagination === 2 ? <MiddleScreen /> :
                                 pagination === 3 ? <Intro /> :
                                     pagination === 4 ? <ScreenTest2 /> :
-                                        pagination === paginationLength ? <End /> :
+                                        pagination === 5 ? <End /> :
                                             'Out of range'
                 }
             </GlobalContent>
             <GlobalFooterComponent/>
         </GlobalStructureComponent>
+        </PaginationContext.Provider>
     )
 }
 
